@@ -1,7 +1,6 @@
 import React, {useState} from "react";
 import "./App.css"
-// import cancelBt from "./cancel.png";
-// import todoIcon from "./src/to-do.png";
+
 
 
  
@@ -31,24 +30,34 @@ function addItem(){
 function removeItem (id) {
   const newArray = items.filter((item) => item.id !== id);
   setItems(newArray);
+
+
 }
 return(
   <div className="App">
 {/* Header  */}
 <h1 className="header">
-<img src={require( "./to-do.png")} height="40" width="40" alt="fdvfgf"/>
   
-  Todo List App</h1>
+  My Todo</h1>
+
 {/* input  (input and button) */}
-<input 
-type="text"
-placeholder="Add an item...."
-value={newItem}
-onChange={(e) => setNewItem(e.target.value)}
 
-/>
+<div className="addNew" >
+<p className="intro">My Todo helps you stay organized and perform your tasks more faster</p>
 
-<button onClick={() => addItem()}>Add</button>
+  <div className="input-and-button">
+  <input 
+      type="text"
+      placeholder="Add an item...."
+      value={newItem}
+      onChange={(e) => setNewItem(e.target.value)
+      }
+
+      />
+      <button onClick={() => addItem()}>Add</button>
+    </div>
+    
+
 
 {/* List of Items */}
 
@@ -67,7 +76,9 @@ onChange={(e) => setNewItem(e.target.value)}
   })}
 
 </ul>
+<img src= {require("./plus.png")}height="40" width="40" alt="plus"  className="plus" />
 
+</div>
   </div>
 )
 
