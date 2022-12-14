@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./App.css";
 import { MdOutlineCancel } from "react-icons/md";
 import { AiOutlinePlus } from "react-icons/ai";
+import Input from "./components/Input";
 
 function App() {
   // state hook _ "useState"
@@ -47,15 +48,11 @@ function App() {
         </p>
 
         {display ? (
-          <div className="input-and-button">
-            <input
-              type="text"
-              placeholder="Add an item...."
-              value={newItem}
-              onChange={(e) => setNewItem(e.target.value)}
-            />
-            <button onClick={() => addItem()}>Add</button>
-          </div>
+          <Input
+            newItem={newItem}
+            setNewItem={(e) => setNewItem(e.target.value)}
+            addItem={() => addItem()}
+          />
         ) : null}
 
         {/* List of Items */}
