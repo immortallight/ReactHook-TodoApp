@@ -76,6 +76,12 @@ li {
   padding: 20px;
   margin: 8px auto;
 }
+.delete-button{
+  float: right;
+}
+.delete-button:hover{
+  cursor: pointer;
+}
 
 .plus {
   height: 45px;

@@ -10,6 +10,7 @@ function App() {
   const [items, setItems] = useState([]);
   const [display, setDisplay] = useState(false);
 
+
   // helper function
   function addItem() {
     if (!newItem) {
@@ -29,10 +30,12 @@ function App() {
   function removeItem(id) {
     const newArray = items.filter((item) => item.id !== id);
     setItems(newArray);
+    
   }
 
   function handleInputDisplay() {
     setDisplay(true);
+    document.querySelector(".plus").style.display = "none";
   }
 
   return (
