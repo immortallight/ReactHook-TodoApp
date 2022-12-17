@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./App.css";
 import { MdOutlineCancel } from "react-icons/md";
 import { AiOutlinePlus } from "react-icons/ai";
+import { AiOutlineCheckCircle } from "react-icons/ai"
 import Input from "./components/Input";
 
 function App() {
@@ -35,7 +36,6 @@ function App() {
 
   function handleInputDisplay() {
     setDisplay(true);
-    document.querySelector(".plus").style.display = "none";
   }
 
   return (
@@ -47,7 +47,7 @@ function App() {
 
       <div className="addNew">
         <p className="intro">
-          My Todo helps you stay organized and perform your tasks more faster
+            My Todo helps you stay organized and perform your tasks more faster <AiOutlineCheckCircle />
         </p>
 
         {display ? (
@@ -73,9 +73,10 @@ function App() {
             );
           })}
         </ul>
-        <button onClick={handleInputDisplay} className="plus">
+        {!display ? (<button onClick={handleInputDisplay} className="plus">
           <AiOutlinePlus />
         </button>
+        ) : null }
       </div>
     </div>
   );

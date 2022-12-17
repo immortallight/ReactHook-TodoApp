@@ -14,9 +14,7 @@ body {
   align-items: center;
   max-height: 100vh;
 }
-/* .App > *{
-  margin-block: 20px;
-} */
+
 
 .header {
   margin-block: 20px;
@@ -27,6 +25,9 @@ body {
   border-radius: 15px;
   padding: 20px;
   margin-block-end: 20px;
+}
+.intro svg{
+  font-size: 17px;
 }
 
 .input-and-button {
